@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+        function createPopupWin(pageURL, pageTitle,
+                    popupWinWidth, popupWinHeight) {
+            var left = (screen.width - popupWinWidth) / 3;
+            var top = (screen.height - popupWinHeight) / 3;
+             
+            var myWindow = window.open(pageURL, pageTitle, 
+                    'resizable=yes, width=' + popupWinWidth
+                    + ', height=' + popupWinHeight + ', top='
+                    + top + ', left=' + left);
+        }
+    </script>
+
+    <div class="container"></div>
+    <div class="container">
+      <img
+        src="bacon_notremoved-removebg.png"
+        style="height: 36px; width: 36px"
+      />
+      <h1 class="title">Bacon Hair Simulator</h1>
+      <img
+        src="bacon_notremoved-removebg.png"
+        style="height: 36px; width: 36px"
+      />
+    </div>
+    <div class="container">
+      <h2 class="subtitle">
+        The <u>best</u> simulator based off of bacon hairs
+      </h2>
+    </div>
+    <br />
+    <div class="container">
+      <h2 class="subtitle">Join a friend</h2>
+    </div>
+    <div class="container">
+        <input type="text" style="border: none; border-radius: 10px; width: 150px; height: 50px; color: black;" placeholder="Your Username">
+    </div>
+    <br />
+    <div class="container">
+        <input type="password" style="border: none; border-radius: 10px; width: 150px; height: 50px; color: black;" placeholder="Join Code">
+    </div>
+    <br />
+    <div class="container">
+        <button class="join" onClick="createPopupWin('popup.html', 'Join Friend', 600, 500)">Join</button>
+    </div>
+  </body>
+</html>
